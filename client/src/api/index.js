@@ -6,7 +6,7 @@ API.interceptors.request.use(req=>{
         req.headers.authourization = `Bearer ${JSON.parse(localStorage.getItem('Profile')).token}`
     }
     return req
-})
+})  
 
 export const login = (authData) => API.post("/user/login", authData);
 export const updateChanelData = (id, updateData) => API.patch(`/user/update/${id}`, updateData);

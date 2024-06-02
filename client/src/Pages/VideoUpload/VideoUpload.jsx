@@ -69,6 +69,7 @@ const VideoUpload = ({setVidUploadPage}) => {
             className="ibox_vidupload"
             maxLength={30}
             placeholder="Enter Title of your video"
+            name="title"
         />
         <label htmlFor="file" className="ibox_vidupload btn_vidUpload">
             <input
@@ -79,6 +80,7 @@ const VideoUpload = ({setVidUploadPage}) => {
               onChange={(e) => {
                 handleSetVideoFile(e);
               }}
+              accept=".mp4,.m3u8,.ts"
             />
         </label>
         </div>

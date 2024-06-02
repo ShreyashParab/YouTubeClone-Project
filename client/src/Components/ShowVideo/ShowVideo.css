@@ -5,7 +5,20 @@
     width: calc(100% - 0.8rem);
     height: 70%;
     border: 1px solid rgba(128,128,128,0.532);
+    /* position: relative; */
 }
+
+.thumbnail{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    z-index: 999;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
 .video_description{
     display: flex;
     height: 4rem;

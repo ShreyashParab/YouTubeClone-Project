@@ -11,22 +11,22 @@ import auth from '../middleware/auth.js'
 
 const routes=express.Router();
 
-routes.post("/uploadVideo",auth,upload.single("file"),uploadVideo)
+routes.post("/uploadVideo",upload.single("file"),uploadVideo)
 
 routes.get("/getvideos",getAllvideos);
 routes.patch('/like/:id',likeController)
 routes.patch('/view/:id',viewController)
 
-routes.post('/likeVideo',auth,likeVideoController)
+routes.post('/likeVideo',likeVideoController)
 routes.get('/getAlllikeVideo',getAlllikeVideoController)
-routes.delete('/deleteLikedVideo/:videoId/:Viewer',auth,deleteLikeVideoController)
+routes.delete('/deleteLikedVideo/:videoId/:Viewer',deleteLikeVideoController)
 
-routes.post('/watchLater',auth,watchLaterController)
+routes.post('/watchLater',watchLaterController)
 routes.get('/getAllwatchLater',getAllwatchLaterController)
-routes.delete('/deleteWatchlater/:videoId/:Viewer',auth,deletewatchLaterController)
+routes.delete('/deleteWatchlater/:videoId/:Viewer',deletewatchLaterController)
 
-routes.post('/History',auth,HistoryController)
+routes.post('/History',HistoryController)
 routes.get('/getAllHistory',getAllHistoryController)
-routes.delete('/deleteHistory/:userId',auth,deleteHistoryController)
+routes.delete('/deleteHistory/:userId',deleteHistoryController)
 
 export default routes;

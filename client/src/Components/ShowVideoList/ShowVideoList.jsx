@@ -4,7 +4,6 @@ import ShowVideo from '../ShowVideo/ShowVideo';
 import { useSelector } from 'react-redux';
 const ShowVideoList = ({videoId}) => {
   const vids=useSelector(s=>s.videoReducer)
-  console.log(vids.data)
     // const vids = [
     //     {
     //       _id: 1,

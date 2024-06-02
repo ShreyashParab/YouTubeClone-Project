@@ -8,12 +8,15 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     cb(
       null,
-      new Date().toISOString().replace(/:/g, "-") + "-" + file.originalname
+      file.originalname
     );
   },
 });
 const filefilter=(req,file,cb)=>{
-    if(file.mimetype === "video/mp4"){
+  const allowedExtensions = ["mp4", "m3u8", "ts"];
+  // Extract the file extension from the original filename
+  const fileExtension = file.originalname.split('.').pop();
+    if(allowedExtensions.includes(fileExtension.toLowerCase())){
         cb(null,true);
     }else{
         cb(null,false);

@@ -16,9 +16,9 @@ const ShowVideo = ({ vid }) => {
     <>
       <Link to={`/videopage/${vid?._id}`}>
           <video
-            // src={`http://localhost:5500/${vid.filePath}`}
+            src={`http://localhost:5500/${vid.filePath}`}
           //   ref={videoRef}
-            src={`https://youtubeclone-project-zf7o.onrender.com/${vid.filePath}`}
+            // src={`https://youtubeclone-project-zf7o.onrender.com/${vid.filePath}`}
             className="video-js vjs-default-skin video_ShowVideo"
           >
           </video>

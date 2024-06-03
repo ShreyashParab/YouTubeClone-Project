@@ -10,7 +10,6 @@ const ShowVideo = ({ vid }) => {
   // console.log(vid)
   const isValidVideo = vid?.fileType === "video/mp4" || (vid?.fileName?.includes("master"));
 
-  // If the video is not valid, return null to prevent rendering
   if (!isValidVideo) return null;
   return (
     <>

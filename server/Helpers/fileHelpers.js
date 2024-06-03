@@ -14,7 +14,6 @@ const storage = multer.diskStorage({
 });
 const filefilter=(req,file,cb)=>{
   const allowedExtensions = ["mp4", "m3u8", "ts"];
-  // Extract the file extension from the original filename
   const fileExtension = file.originalname.split('.').pop();
     if(allowedExtensions.includes(fileExtension.toLowerCase())){
         cb(null,true);

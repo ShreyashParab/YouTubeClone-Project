@@ -47,8 +47,8 @@ const VideoPage = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-    // const source = `https://youtubeclone-project-zf7o.onrender.com/${vv?.filePath}`;
-    const source = `http://localhost:5500/${vv?.filePath}`;
+    const source = `https://youtubeclone-project-py54.onrender.com/${vv?.filePath}`;
+    // const source = `http://localhost:5500/${vv?.filePath}`;
     let hls;
     let player;
 
@@ -114,8 +114,8 @@ const VideoPage = () => {
             {vv?.filePath && vv.filePath.endsWith('.mp4') && !vv.filePath.endsWith('.ts') ? (
             <video
               id='player'
-              src={`http://localhost:5500/${vv?.filePath}`}
-              // src={`https://youtubeclone-project-zf7o.onrender.com/${vv?.filePath}`}
+              // src={`http://localhost:5500/${vv?.filePath}`}
+              src={`https://youtubeclone-project-py54.onrender.com/${vv?.filePath}`}
               className={"video_ShowVideo_videoPage"}
               controls
               autoPlay
